@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/subjectFragment"
+        android:title="Przedmioty"
+        android:icon="@drawable/ic_subjects"
+        />
+    <item
+        android:id="@+id/studentFragment"
+        android:title="Studenci"
+        android:icon="@drawable/ic_students"
+        />
+    <item
+        android:id="@+id/marksFragment"
+        android:icon="@drawable/ic_marks"
+        android:title="Ustawienia" />
+</menu>

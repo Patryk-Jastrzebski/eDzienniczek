@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/subjectFragment"
+    >
+
+    <fragment
+        android:id="@+id/studentFragment"
+        android:name="com.example.edzienniczek.student.StudentListFragment"
+        android:label="StudentFragment">
+
+        <action
+            android:id="@+id/action_studentFragment_to_addStudentFragment"
+            app:destination="@id/addStudentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/marksFragment"
+        android:name="com.example.edzienniczek.student.MarksFragment"
+        android:label="MarksFragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/subjectFragment"
+        android:name="com.example.edzienniczek.subject.SubjectListFragment"
+        android:label="SubjectFragment">
+
+        <action
+            android:id="@+id/action_subjectFragment_to_addSubjectFragment"
+            app:destination="@id/addSubjectFragment" />
+        <action
+            android:id="@+id/action_subjectFragment_to_subjectDetailsFragment"
+            app:destination="@id/subjectDetailsFragment" />
+
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/addSubjectFragment"
+        android:name="com.example.edzienniczek.subject.AddSubjectFragment"
+        android:label="AddSubjectFragment" >
+        <action
+            android:id="@+id/action_addSubjectFragment_to_subjectFragment"
+            app:destination="@id/subjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subjectDetailsFragment"
+        android:name="com.example.edzienniczek.subject.SubjectDetailsFragment"
+        android:label="SubjectDetailsFragment" >
+        <action
+            android:id="@+id/action_subjectDetailsFragment_to_subjectFragment"
+            app:destination="@id/subjectFragment" />
+        <argument
+            android:name="subjectName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_subjectDetailsFragment_to_studentAddGradeFragment"
+            app:destination="@id/studentAddGradeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addStudentFragment"
+        android:name="com.example.edzienniczek.student.AddStudentFragment"
+        android:label="AddStudentFragment" >
+        <action
+            android:id="@+id/action_addStudentFragment_to_studentFragment"
+            app:destination="@id/studentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentAddGradeFragment"
+        android:name="com.example.edzienniczek.student.StudentAddGradeFragment"
+        android:label="StudentAddGradeFragment" >
+        <action
+            android:id="@+id/action_studentAddGradeFragment_to_subjectDetailsFragment"
+            app:destination="@id/subjectDetailsFragment" />
+        <argument
+            android:name="student_nameInDetail"
+            app:argType="string" />
+        <argument
+            android:name="subjectSelected_InDetail"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>
